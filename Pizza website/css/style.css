@@ -172,18 +172,18 @@ p{
 }
 
 .navbar-toggler:focus{
-    outline: unset;
-    border: unset;
-    box-shadow: none;
+    outline: unset !important;
+    border: unset !important;
+    box-shadow: none !important;
 }
-.nav-link a{
+.nav-link{
     font-size: 0.9375rem;
     font-weight: 600;
     text-transform: capitalize;
-    color: var(--white-color);
+    color: var(--white-color) !important;
     letter-spacing: 1px;
 }
-.nav-link:active,
+.nav-link.active,
 .nav-link:hover{
     color: var(--primary-color)!important;
 }
@@ -204,10 +204,10 @@ p{
     transition: all .15s ease-in-out 0s;
 }
 .navigation-wrap.scroll-on .nav-link{
-    color: var(--black-color);
+    color: var(--black-color) !important;
 }
 .navigation-wrap.scroll-on .nav-link:hover,
-.navigation-wrap.scroll-on .nav-link:active{
+.navigation-wrap.scroll-on .nav-link.active{
     color: var(--primary-color);
 }
 
