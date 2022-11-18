@@ -202,6 +202,12 @@ footer{
     color: var(--text-white);
 
 }
-footer .row ul{
-    list-style: none;
+
+@media(max-width:530px){
+    .testimonial .row{
+        margin: auto;
+    }
+    .testimonial .row .testimonial-img{
+        text-align: center;
+    }
 }
