@@ -3,6 +3,7 @@
 
 body{
     font-family: var(--primary-font);
+    overflow-x: hidden;
 }
 h1{
     font-weight: 700;
@@ -33,6 +34,7 @@ h1 span{
 }
 .header-scrolled{
     background-color: var(--text-white);
+    box-shadow:  0px 20px 40px var(--box-shadow);
     position: fixed;
     top: -0.4rem;
     left: 0;
@@ -209,5 +211,8 @@ footer{
     }
     .testimonial .row .testimonial-img{
         text-align: center;
+    }
+    .hero-section .top-banner{
+        flex-direction: column;
     }
 }

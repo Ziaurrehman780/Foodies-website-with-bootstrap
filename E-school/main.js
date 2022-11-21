@@ -1,7 +1,7 @@
 // header scroll 
 let nav = document.querySelector("header");
 window.onscroll = function(){
-    if(document.documentElement.scrollTop > 30){
+    if(document.documentElement.scrollTop > 20){
         nav.classList.add("header-scrolled");
     }else{
         nav.classList.remove("header-scrolled");
