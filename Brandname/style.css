@@ -11,7 +11,7 @@ h1{
     font-style: normal;
     font-weight: 700;
     font-size: 58px;
-    line-height: 80px;
+    /* line-height: 80px; */
     letter-spacing: 0.2px;
     color: var(--light-text-color);
 }
@@ -126,6 +126,10 @@ a{
     --danger-color: #E74040;
     --danger-text-color: #E74040;
     --muted-color: #BDBDBD;
+    --faded-primary-color: #B3E3FF;
+    --faded-secondary-color: #B9EAA8;
+    --faded-danger-color: #FFDCD1;
+    
 }
 /* .container{
     display: flex;
@@ -151,7 +155,7 @@ a{
     padding: 0px;
     gap: 10px;
     
-    width: 731px;
+    /* width: 731px; */
 }
 
 
@@ -383,8 +387,8 @@ div .navbar-collapse a i{
     line-height: 22px;
 }
 #home .top-banner .banner-img img{
-    max-width: 632px;
-    height: 574px;
+    /* width: 632px !important;
+    height: 574px !important; */
 }
 
 /* ================================
@@ -411,7 +415,7 @@ div .navbar-collapse a i{
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    /* gap: 30px; */
+    gap: 30px;
 }
 #packages .content-section{
     display: flex;
@@ -424,10 +428,28 @@ div .navbar-collapse a i{
 #packages .content-section h2{
     width: 394px;
 }
-
-#packages p{
+#packages .content-section p{
     color: var(--light-text-color);
     width: 345px;
+}
+
+#packages .jumbo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+.feature-title{
+    width: 157px;
+}
+
+.feature-description{
+    color: var(--second-text-color) !important;
+    width: 132px;
+  /* width: 100px; */
+  /* border: 2px solid red; */
 }
 
 .card-section .card{
@@ -436,7 +458,7 @@ div .navbar-collapse a i{
     align-items: flex-start;
     padding: 35px 40px;
     gap: 20px;
-    height: 292px;
+    /* height: 292px; */
 }
 .card-section .card .fixed-height{
     display: flex;
@@ -444,12 +466,18 @@ div .navbar-collapse a i{
     align-items: flex-start;
     padding: 22px 19px;
     gap: 10px;
-    
     width: 70px;
     height: 76px;
-    background: #B3E3FF;
     border-radius: 10px;
-    
+}
+#packages .card-section .cvard1 .fixed-height{
+    background-color: var(--faded-primary-color) !important;
+}
+.card-section .cvard2 .fixed-height{
+    background-color: var(--faded-secondary-color);
+}
+#packages .card-section .cvard3 .better{
+    background-color: var(--faded-danger-color);
 }
 .card-section .card h5{
     font-variant: var(--text-color);
