@@ -15,13 +15,14 @@
     --faded-secondary-color: #B9EAA8;
     --faded-danger-color: #FFDCD1;
     --yellow-color: #F3CD03;
+    --ellipse-color:  #AAEAD0;
     
 }
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
 }
 h1{
     font-weight: 700;
@@ -143,6 +144,17 @@ small{
     position: fixed;
     background: var(--faded-primary-color);
 }
+span i{
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 100;
+}
+button:hover ir{
+    color: var(--light-text-color);
+}
+.arrow-icon{
+    margin-bottom: 2px !important;
+}
 
 
 
@@ -194,9 +206,7 @@ small{
 }
 
  .container .navbar-brand h3{
-    max-width: 187px;
-    margin:;
-    font-family: 'Montserrat';
+    width: 187px;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -204,9 +214,9 @@ small{
     
     letter-spacing: 0.1px;
     padding: 13px 35px 13px 0;
-    color: #FFFFFF;
 }
  .navbar-collapse{
+    margin-left: 41px;
     max-width: 815px !important;
     color: #FFFFFF !important;
     /* margin: 16px 143px 17px; */
@@ -218,11 +228,9 @@ small{
     padding: 0px;
     gap: 21px;
 }
-ul .nav-item{
-    /* margin-left: 21px; */
-}
+
  .nav-link{
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -233,7 +241,7 @@ ul .nav-item{
 }
 div .navbar-collapse {
     max-width: 300px;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -253,7 +261,7 @@ div .navbar-collapse {
     color: #FFFFFF !important;
 }
 .navbar-collapse .login .login-link{
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -262,14 +270,15 @@ div .navbar-collapse {
     letter-spacing: 0.2px;
     color: #FFFFFF !important;
 }
-div .navbar-collapse .main-btn{
+div .navbar-nav .main-btn{
     padding: 15px 25px;
     margin-left: 45px;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat' sans-serif !important; */
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 22px;
+    background-color: var(--primary-color);
     /* identical to box height, or 157% */
     
     letter-spacing: 0.2px;
@@ -295,7 +304,7 @@ div .navbar-collapse a i{
     height: 682px;
 }
 
-.top-banner .row{
+.top-banner .banner-row{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -305,14 +314,17 @@ div .navbar-collapse a i{
 }
 #home .top-banner .banner-content{
     max-width: 573px;
+    height: 466px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px;
+    padding: 108px 0;
     gap: 30px;
+    align-self: center;
 }
-#home .top-banner .banner-content .header-tag{
+#home .top-banner .banner-content h5{
+    
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -356,13 +368,15 @@ div .navbar-collapse a i{
     
 }
 #home .top-banner .banner-content .home-btn .button1{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     padding: 15px 40px;
     font-weight: 700;
     font-size: 14px;
     line-height: 22px;
+    background: var(--primary-color);
+    box-sizing: border-box;
 }
 #home .top-banner .banner-content .home-btn .button2{
     display: flex;
@@ -372,24 +386,39 @@ div .navbar-collapse a i{
     font-weight: 700;
     font-size: 14px;
     line-height: 22px;
+    box-sizing: border-box;
+    /* outline-color:  var(--primary-color) !important; */
+    border: 1px var(--primary-color) inset;
+    border-radius: 5px;
+    color: var(--primary-color);
+    background: transparent;
+    
 }
 /* home img design */
+.top-banner .img-col{
+    padding: 36px 54px;
+}
 .home-img{
     position: relative;
+    /* position: absolute; */
+    width: 632px;
+    height: 574px;
+    left: 36px;
+    top: 54px;
     z-index: 1;
 }
 .home-img .first-img{
     position: absolute;
     width: 193.73px;
     height: 193.73px;
-    left: 7.36px;
+    left: -27.36px;
     top: 17.17px;    
 }
 .home-img .second-img{
     position: absolute;
     width: 237.87px;
     height: 221.93px;
-    left: 344.54px;
+    left: 305.54px;
     top: 351.9px;
     
 }
@@ -397,7 +426,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 318.79px;
     height: 218.25px;
-    left: 0px;
+    left: -37px;
     top: 344.54px;
     z-index: 3;
     
@@ -414,7 +443,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 42.18px;
     height: 42.18px;
-    left: 523.28px;
+    left: 485.28px;
     top: 61.49px;
     
 }
@@ -422,7 +451,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 406.12px;
     height: 406.12px;
-    left: 157.92px;
+    left: 120.92px;
     top: 47.9px;
     background: var(--ellipse-color);
     z-index: -1;
@@ -432,7 +461,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 52.91px;
     height: 52.91px;
-    left: 34.22px;
+    left: -2.22px;
     top: 250.96px;
 }
 .home-img .group324 .stats-dot{
@@ -450,7 +479,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 52.91px;
     height: 52.91px;
-    left: 329.52px;
+    left: 290.52px;
     top: 515.51px;
     z-index: -1;
     
@@ -561,6 +590,7 @@ div .navbar-collapse a i{
 }
 .card-section .card h5{
     font-variant: var(--text-color);
+    font-weight: 700;
 }
 .card-section .card .fixed-width{
     width: 50px;
@@ -605,14 +635,14 @@ div .navbar-collapse a i{
     position: absolute;
     width: 158px;
     height: 158px;
-    left: -70px;
+    left: -50px;
     top: 14px;
 }
 .course-img .second-img{
     position: absolute;
     width: 194px;
     height: 181px;
-    left: 281px;
+    left: 215px;
     top: 287px; 
     z-index: 1;   
     
@@ -621,7 +651,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 260px;
     height: 178px;
-    left: -30px;
+    left: -65px;
     top: 281px;
     
 }
@@ -629,7 +659,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 34.41px;
     height: 34.41px;
-    left: 426.78px;
+    left: 366.78px;
     top: 50.15px;
 }
 .course-img .main-img img{
@@ -643,7 +673,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 331.22px;
     height: 331.22px;
-    left: 90.79px;
+    left: 65.79px;
     top: 39.07px;
     background: var(--ellipse-color);
     z-index: -1;
@@ -653,7 +683,7 @@ div .navbar-collapse a i{
     position: absolute;
     width: 43.15px;
     height: 43.15px;
-    left: 27.91px;
+    left: -30.91px;
     top: 204.68px;
 }
 .course-img.group324 .stats-dot{
@@ -672,8 +702,8 @@ div .navbar-collapse a i{
     position: absolute;
     width: 43.15px;
     height: 43.15px;
-    left: 276.91px;
-    top: 429.77px;
+    left: 203.91px;
+    top: 420.77px;
     
 }
 .course-img .group323 .stats-graph{
@@ -754,10 +784,10 @@ div .navbar-collapse a i{
     line-height: 24px;
     letter-spacing: 0.2px;
     color: var(--primary-color);
-    display: inline;
+    /* display: inline; */
 }
 #courses .container .row .content-section a img{
-   display: inline;
+   /* display: inline; */
 }
 /* ================================
     course section end
@@ -834,6 +864,8 @@ div .navbar-collapse a i{
 #product .card{
     padding: none;
     border: none;
+    outline: unset;
+
 }
 
 #product .container .fixed-height{
@@ -846,7 +878,7 @@ div .navbar-collapse a i{
     text-align: center;
     position: absolute;
     color: var(--light-text-color);
-    width: 52px;
+    /* width: 52px; */
     height: 24px;
     left: 20px;
     top: 20px;
@@ -874,6 +906,7 @@ div .navbar-collapse a i{
 }
 #product img.main-img{
     height: 300px;
+    width: 100%;
 }
 
 .product-actions .cart{
@@ -1057,6 +1090,13 @@ div .navbar-collapse a i{
     color: var(--light-text-color);
     background-color: var(--primary-color);
 }
+.card-body button h6{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+}
 .card-body button i{
     width: 9.14px;
     height: 16px;
@@ -1078,7 +1118,7 @@ div .navbar-collapse a i{
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    width: 1045px;
+    width: 1050px;
 }
 #testimonial .container .row1 .main-content{
     display: flex;
@@ -1212,10 +1252,26 @@ div .navbar-collapse a i{
     height: 363px;
 }
 #contact .subscribe-row .col-md-12 .email-box{
-    height: 58px;
+    /* height: 58px; */
     width: 688px;
 }
-
+#contact .subscribe-row .col-md-12 .email-box input::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: var(--second-text-color);
+    padding: 15px 0;
+}
+#contact .subscribe-row .col-md-12 .email-box button{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    background: var(--primary-color);
+    padding: 15px 22.5px;
+}
 
 
 /* footer section  */
