@@ -1226,8 +1226,9 @@ div .navbar-collapse a i{
 #contact .row h6{
     color: var(--primary-color);
     letter-spacing: 0.2px;
+    font-weight: 700;
 }
-.contact .row h2{
+#contact .row h2{
     font-weight: 700;
     letter-spacing: 0.2px;
 }
