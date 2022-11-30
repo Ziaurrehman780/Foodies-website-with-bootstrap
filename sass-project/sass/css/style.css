@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: 'Mulish', sans-serif; }
+
 header nav .navbar-brand {
   display: flex;
   gap: 12px;
@@ -58,14 +62,13 @@ header main .top-banner {
     background: #458FF6;
     border: none;
     color: #FFFFFF;
-    mix-blend-mode: normal; }
-    header main .top-banner .main-btn .main-btn {
-      border-radius: 55px;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 60px;
-      width: fit-content;
-      padding: 0px 40px; }
+    mix-blend-mode: normal;
+    width: fit-content;
+    padding: 0 51px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 60px;
+    border-radius: 55px; }
 
 .services {
   margin: 80px 0px;
@@ -243,13 +246,28 @@ header main .top-banner {
         line-height: 60px;
         border-radius: 55px;
         mix-blend-mode: normal; }
+        .apps .apps-row .apps-text .main-btn i {
+          margin-left: 14px; }
     .apps .apps-row .apps-img {
       width: 100%; }
 
 .testimonial-section {
-  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
   border-radius: 24px;
-  padding: 64px 0px; }
+  padding: 100px 0px; }
+  .testimonial-section button.carousel-control-prev {
+    position: absolute;
+    left: 30.9%;
+    right: 6.82%;
+    bottom: -129.57%;
+    color: #458FF6; }
+  .testimonial-section button.carousel-control-next {
+    position: absolute;
+    left: 52.9%;
+    right: 6.82%;
+    bottom: -129.57%; }
+    .testimonial-section button.carousel-control-next i.carousel-control-next-icon {
+      font-size: 45px;
+      color: #458FF6; }
   .testimonial-section h2 {
     font-weight: 700;
     font-size: 36px;
@@ -265,8 +283,53 @@ header main .top-banner {
       height: 2px;
       left: 50%;
       top: 100%;
-      background: #000000;
+      background-color: #FFFFFF;
       border-radius: 10px; }
+  .testimonial-section .profile {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .testimonial-section .profile img {
+      width: 180px;
+      height: 180px; }
+    .testimonial-section .profile h5 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 18px;
+      color: #FFFFFF;
+      mix-blend-mode: normal; }
+    .testimonial-section .profile p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 48px;
+      color: rgba(255, 255, 255, 0.85);
+      mix-blend-mode: normal; }
+  .testimonial-section p.para {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    mix-blend-mode: normal;
+    width: 32%; }
+  .testimonial-section .carousel-indicators {
+    bottom: -6.185rem; }
+    .testimonial-section .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #5B9BF3 !important;
+      opacity: 0.3 !important; }
+      .testimonial-section .carousel-indicators button.active {
+        background-color: #5B9BF3;
+        opacity: 1 !important;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; }
+
+.carousel-inner {
+  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+  border-radius: 24px; }
 
 .article-section {
   position: relative;
