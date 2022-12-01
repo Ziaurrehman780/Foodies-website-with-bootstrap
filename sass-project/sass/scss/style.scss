@@ -4,6 +4,8 @@ $mycolor: red;
 
 body{
     font-family: 'Mulish', sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 @mixin main-btn{
     .main-btn{
@@ -317,26 +319,45 @@ header{
 }
 
 .testimonial-section{
-    button.carousel-control-prev{
+    position: relative;
+    button.prev{
         position: absolute;
-        left: 30.9%;
-        right: 6.82%;
-        // top: 7.14%;
-        bottom: -129.57%;
+        top: 113%;
+        left: 35%;
         color: #458FF6;
+        background-color: transparent;
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        cursor: pointer;
+        
+        i.left{
+            font-size: 28px;
+            cursor: pointer;
+        }
         
 
     }
-    button.carousel-control-next{
+    button.next{
         position: absolute;
-        left: 52.9%;
-        right: 6.82%;
-        // top: 7.14%;
-        bottom: -129.57%;
-        i.carousel-control-next-icon{
-            font-size: 45px;
+        top: 113%;
+        right: 35%;
+        color: #458FF6;
+        background: transparent;
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-self: center;
+        cursor: pointer;
+
+        i.right{
+            cursor: pointer;
+            position: relative;
+            font-size: 28px;
             // font-weight: bold;
-            color: #458FF6;;
+            
         }
         
 
@@ -507,13 +528,15 @@ header{
                         font-weight: 600;
                         font-size: 17px;
                         line-height: 28px;
-                        /* identical to box height, or 165% */
-                        
-                        
                         color: #4089ED;
-                        
                         mix-blend-mode: normal;
                         text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        span i{
+                            line-height: 28px;
+                        }
                     }
                 }
             }
