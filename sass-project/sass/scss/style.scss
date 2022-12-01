@@ -18,6 +18,11 @@ body{
     }
 }
 
+.navbar-toggler{
+    outline: unset !important;
+    border: none !important;
+    box-shadow: none !important;
+}
 
 header{
     nav{
@@ -129,13 +134,13 @@ header{
             mix-blend-mode: normal;
             position: relative;
             margin-bottom: 61px;
-            &:after{
+            &::before{
                 position: absolute;
                 content: "";
                 width: 56px;
                 height: 2px;
-                left: 623px;
-                top: 85px;
+                left: 48%;
+                bottom: -50%;
                 background: #000000;
                 border-radius: 5px;
             }
@@ -175,7 +180,7 @@ header{
             h3{
                 font-weight: 700;
                 font-size: 24px;
-                line-height: 56px;
+                // line-height: 56px;
                 color: #000000;
                 mix-blend-mode: normal;
             }
@@ -452,7 +457,7 @@ header{
         line-height: 30px;
         color: rgba(255, 255, 255, 0.9);
         mix-blend-mode: normal;
-        width: 32%;
+        width: 62%;
     }
     .carousel-indicators{
         bottom: -6.185rem;
@@ -521,12 +526,12 @@ header{
                 color: #000000;
                 mix-blend-mode: normal;
                 &::after{
-                    position: absolute;
+                    position: absolute;  
                     content: " ";
                     width: 56px;
                     height: 2px;
-                    left: 635px;
-                    top: 100px;
+                    left: 48%;
+                    bottom: -50%;
                     
                     background: #000000;
                     border-radius: 10px;
@@ -537,6 +542,7 @@ header{
             // margin: 0px 80px;    
             .card{
                 border-radius: 25px 25px 0px 0px;
+                margin-bottom: 50px;
                 
                 width: 100%;
                 border: none;
@@ -630,7 +636,7 @@ footer{
     }
     div.light-spheres{
         position: absolute;
-        bottom: -5%;
+        bottom: -0%;
         left: -1%;
         // background-color: #000000;
         // z-index: -1;
@@ -734,6 +740,7 @@ footer{
             height: 10.42px;
             border-radius: 50%;
             background: linear-gradient(338.5deg, #FFFFFF -951.03%, #FFFFFF 493.02%);
+            opacity: .7;
         }
     }
 }
