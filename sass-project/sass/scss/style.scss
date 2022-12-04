@@ -4,7 +4,8 @@ $mycolor: red;
 
 body{
     font-family: 'Mulish', sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    width: 100vw;
     box-sizing: border-box;
 }
 @mixin main-btn{
@@ -180,7 +181,7 @@ header{
             h3{
                 font-weight: 700;
                 font-size: 24px;
-                // line-height: 56px;
+                line-height: 56px;
                 color: #000000;
                 mix-blend-mode: normal;
             }
@@ -457,7 +458,7 @@ header{
         line-height: 30px;
         color: rgba(255, 255, 255, 0.9);
         mix-blend-mode: normal;
-        width: 62%;
+        width: 32%;
     }
     .carousel-indicators{
         bottom: -6.185rem;
@@ -488,7 +489,7 @@ header{
     margin: 150px 0;
     .dark-spheres{
         position: absolute;
-        top: 23%;
+        top: 22%;
         left: 3.5%;
     }
     img.article-bg{
