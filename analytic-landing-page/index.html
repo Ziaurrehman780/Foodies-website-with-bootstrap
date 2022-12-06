@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-5 gap-4">
+                <ul class="navbar-nav ms-5 gap-4 ms-auto">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Products</a>
                   </li>
@@ -38,7 +38,7 @@
                     <a class="nav-link" href="#">Blog</a>
                   </li>
                 </ul>
-                <div class="navbar-nav d-flex align-items-center  ms-auto">
+                <div class="navbar-nav d-flex align-items-center  mx-auto">
                     <div class="anchor">
                         <a href="#" class="text-decoration-none px-5">Sign in</a>
                     </div>
@@ -50,23 +50,29 @@
             </div>
           </nav>
           <main>
-            <div class="container-fluid">
+            <div class="container">
+              <img src="images/Subtract1.svg" class="first-img">
+              <img src="images/Subtract2.svg" class="sec-img">  
               <div class="row justify-content-end">
-                  <div class="col-md-6 content-section">
-                    <h1>Monitor your businness on real-time dashboard</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.</p>
-                    <button class="main-btn">Try for free</button>
+                  <div class="col-md-6 d-flex justify-content-end">
+                    <div class="content-section">
+                      <h1>Monitor your businness on real-time dashboard</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.</p>
+                      <button class="main-btn">Try for free</button>
+                    </div>
                   </div>
-                  <div class="col-md-6 img-section">
-                    <img src="images/main-screen-small.png" class="img-fluid main-img">
-                    <img src="images/home2.png" class="img-fluid abs-img">
+                  <div class="col-md-6">
+                    <div class="img-section position-relative">
+                      <img src="images/main-screen-small.png" class="main-img">
+                      <img src="images/home2.png" class="img-fluid abs-img">
+                    </div>
                   </div>
               </div>
             </div>
+            <img src="images/home-border.png" class="img-fluid bottom-img bg-white">
           </main>
-          <img src="images/Subtract1.svg" class="first-img">
-          <img src="images/Subtract2.svg" class="sec-img">  
-          <!-- <img src="images/home-border.png" class="img-fluid bottom-img"> -->
+          
+          
     </header>
     <div class="bg-red absolute-div"></div>
     <section class="feature">
@@ -142,13 +148,14 @@
     <footer>
       <!-- <img src="images/home-border.png" class="img-fluid footer-border-img"> -->
     <div class="container">
+      <img src="images/footer-bg.svg" class="bg-img img-fluid">
       <div class="row row-content">
         <h2>Pricing Plans</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet
           volutpat pellentesque volutpat est. </p>
       </div>
       <div class="row row-card">
-        <div class="col-md-4 col-card">
+        <div class="col-md-3 col-card">
           <div class="dark-card card p-5 bg-dark gap-4 text-center footer-card">
             <div class="heading">
               <h3>Starter</h3>
@@ -159,11 +166,11 @@
               <h3><small>$</small>29</h3>
               <small>per month</small>
             </div>
-            <button class="main-btn btn btn-outline-light rounded-pill">Order</button>
+            <button class="main-btn rounded-pill">Order</button>
           </div>
         </div>
-        <div class="col-md-4 col-card">
-          <div class="dark-card card p-5 bg-dark gap-4 text-center footer-card light">
+        <div class="col-md-3 col-card">
+          <div class=" card p-5 bg-dark gap-4 text-center footer-card light">
             <div class="heading">
               <h3>Standard</h3>
               <p class="w-100">up to 20 users</p>
@@ -176,7 +183,7 @@
             <button class="main-btn btn btn-outline-light rounded-pill">Order</button>
           </div>
         </div>
-        <div class="col-md-4 col-card">
+        <div class="col-md-3 col-card">
           <div class="dark-card card p-5 bg-dark gap-4 text-center footer-card">
             <div class="heading">
               <h3>Premium</h3>
@@ -187,7 +194,7 @@
               <h3><small>$</small>299</h3>
               <small>per month</small>
             </div>
-            <button class="main-btn btn btn-outline-light rounded-pill">Order</button>
+            <button class="main-btn rounded-pill">Order</button>
           </div>
         </div>
       </div>
