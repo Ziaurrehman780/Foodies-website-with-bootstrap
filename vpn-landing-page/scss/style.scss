@@ -9,11 +9,12 @@ body{
     box-sizing: border-box !important;
     width: 100vw !important;
     overflow-x: hidden !important;
-    background: #F6F6F6 !important;
+    background: #F6F6F6;
 }
 html,
 body{
     font-size: 10px;
+    // background-color: #F6F6F6;
 }
 h1{
     font-family: 'Rubik' !important;
@@ -150,13 +151,25 @@ header{
                         color: #4F5665;
                     }
                     button{
+                        position: relative;
                         width: fit-content;
                         padding: 17.5px 77.5px;
                         border-radius: 10px !important;
                         background-color: #F53838 !important;
-                        box-shadow: 5px 20px 100px #F53838;
+                        // box-shadow: 5px 20px 100px #F53838;
                         color: #F6F6F6;
                         border: none;
+                        &::before{
+                            position: absolute;
+                            content: " ";
+                            width: 90%;
+                            height: 110%;
+                            left: 16px;
+                            background: rgba(245, 56, 56, 0.35);
+                            filter: blur(27px);
+                            border-radius: 10px;
+    
+                        }
                     }
                 }
             }
@@ -178,10 +191,30 @@ header{
         background-color: #FFFFFF !important;
         background: #F6F6F6;
         border-radius: 10px;
-        box-shadow: 0px 1px 70px 0px lightgray;
+        
         .row{
+            position: relative;
+            // border: 1px solid black;
+            margin: 0px;
+            background-color: #FFFFFF !important;
+            border-radius: 10px;
             padding: 37.21px 0px;
             // border-radius: 10px;
+            box-shadow: 1px 1px 10px 2px lightgray;
+                &::after{
+                position: absolute;
+                content: " ";
+                width: 90%;
+                height: 110%;
+                // margin: auto;
+                background: #0D1025;
+                opacity: 0.06;
+                filter: blur(57px);
+                border-radius: 10px;
+                // top: 16.5px;
+                left: 65px;
+
+            }
             .col-md-4{
                 display: flex;
                 align-items: center;
@@ -264,7 +297,7 @@ header{
 
 .plans{
     margin: 100px;
-    padding: 80px;
+    padding: 0px;
     .container{
         padding: 60px 0px;
         .content-row{
@@ -288,6 +321,7 @@ header{
             display: flex;
             // gap: 30px;
             .col-md-4{
+                width: 30%;
                 .plans-card{
                     border-radius: 10px !important;
                     // padding: 50px 70px;
@@ -356,7 +390,7 @@ header{
 }
 
 .images{
-    // padding: 80px 0px;
+    padding: 80px 0px;
     .container{
         .row{
             .col-md-12{
@@ -388,19 +422,19 @@ header{
 }
 
 .testimonial{
-    // background-color:  #FFFFFF;
+    // background-color:  #f6f6f6;
     display: flex;
     justify-content: center;
     gap: 50px;
     align-items: center;
-    // margin: 100px 0 0 0;
-    padding: 150px 0px;
+    margin: 100px 0 100px 0;
+    padding: 100px 0px 250px 0px;
     position: relative;
     // border: 1px solid black;
     // height: 70vh;
     .container{
-        position: relative;
-        border-radius: 40px !important;
+        // position: relative;
+        // border-radius: 40px !important;
         .content-row{
             .content-col{
                 display: flex;
@@ -417,13 +451,17 @@ header{
         }
     }
     .subscribe{
-        margin-top: 100px !important;
+        // position: absolute;
+        bottom: 0%;
+        // left: 80%;
+        margin-top: 70px !important;
         display: flex;
         justify-content: center;
-        // position: relative;
+        position: absolute;
+        bottom: 3.9%;
         
         border-radius: 10px !important;
-        background-color: #ffffff;
+        background-color: transparent;
         // box-shadow: 0px 0px 20px 0px gray;
 
         .subscribe-row{
@@ -433,10 +471,25 @@ header{
             padding: 58.5px 100px !important;   
             display: flex;
             align-items: center;
-            box-shadow: 0px .5px 6px #4F5665;
+            box-shadow: 1px 1px 10px 2px lightgray;
             border-radius: 10px;
             left: 0%;
-            top: 100%;
+            top: 50%;
+            // position: relative;
+            &::after{
+                position: absolute;
+                content: " ";
+                width: 90%;
+                height: 110%;
+                // margin: auto;
+                background: #0D1025;
+                opacity: 0.06;
+                filter: blur(57px);
+                border-radius: 10px;
+                top: 16.5px;
+                left: 65px;
+
+            }
             
             .col-md-4{
                 display: flex;
@@ -452,17 +505,31 @@ header{
             .col-md-3{
                 button{
                     background: #F53838;
+                    color: #ffffff;
                     padding: 17.5px 70px !important;
                     border-radius: 10px !important;
-                    box-shadow: 0 10px 60px 0 #F53838;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: " ";
+                        width: 90%;
+                        height: 110%;
+                        left: 16px;
+                        background: rgba(245, 56, 56, 0.35);
+                        filter: blur(27px);
+                        border-radius: 10px;
+
+                    }
+
                 }
+                
             }
         }
     }
 }
 
 .hello{
-    z-index: 1;
+    // z-index: 1;
     main{
     // background-color: #F53838;
         // width: 1600px !important;
@@ -481,7 +548,7 @@ header{
         flex-wrap: nowrap !important;
         height: 100%;
         .col-md-5{
-            width: 36%;
+            width: 36.11%;
             .card{
                 border-radius: 10px;
                 padding: 30px;
@@ -548,43 +615,52 @@ header{
     position: relative;
     background-color: transparent;
     .carousel-inner{
-        padding: 100px 0px;
+        padding: 0px 0px;
         background-color: transparent;
-        z-index: -5;
+        // z-index: -5;
         overflow: visible;
     }
     .carousel-indicators{
+        margin-top: 80px;
         position: absolute;
-        top: 105%;
-        left: -73%;
+        top: 110%;
+        left: -86%;
         display: flex;
         align-items: center;
         gap: 15px;
         button{
-            width: 25px !important;
-            // height: 15px !important;
-            border-radius:50%;
-            background: #DDE0E4;
-            // background-color: black;
+            width: 15px !important;
+            height: 15px !important;
+            // border-radius:50%;
+            // background: #DDE0E4;
+            background-color: transparent;
             scroll-behavior: smooth;
             opacity: 1;
+            background-image: url(../images/indicator.png);
+            background-repeat: no-repeat;
+            background-size: cover;
             
         }
         button.active{
-            width: 60px !important;
-            height: 0 !important; 
-            border-radius: 44%;
-            background: #F53838;
+            width: 45px !important;
+            height: 15px !important;
+            background-color: #F6F6F6; 
+            // border-radius: 44%;
+            // background: #F53838;
+            background-image: url(../images/Union.png);
+            background-repeat: no-repeat;
+            background-size: cover;
 
         }
     }
     .carousel-control-prev{
-        width: 3.9% !important;
-        height: 9.3% !important;
+        width: 60px !important;
+        height: 60px !important;
         position: absolute;
         // background-color: #0B132A;
         top: 100%;
         left: 83%;
+        margin-top: 80px;
         opacity: 1 !important;
         span{
             margin: auto;
@@ -594,31 +670,30 @@ header{
             justify-content: center;
             border-radius: 50%;
             border: 2px solid #F53838;
-            width: 60px;
-            height: 60px;
+            width: 60px !important;
+            height: 60px !important;
             background-image: unset;
-            i{
+            img{
                 background-image: unset;
                 font-size: 30px !important;
                 font-weight: 600 !important;
                 color: #F53855;
                 opacity: 1 !important;
-                margin: auto;
-                position: absolute;
-                top: 25%;
-                left: 25%;
+                // margin: auto;
+                // position: absolute;
             }
         }
     }
     .carousel-control-next{
-        width: 3.9% !important;
-        height: 9.3% !important;
+        width: 60px !important;
+        height: 60px !important;
         position: absolute;
         top: 100%;
         left: 88.5%;
         opacity: 1 !important;
         // z-index: -1;
         border-radius: 50%;
+        margin-top: 80px;
         span{
             margin: auto;
             position: relative;
@@ -651,9 +726,9 @@ header{
 
 footer{
     // border-top: 1px solid #2FAB73;
-    margin: 100px 0  0;
-    padding: 100px 0 100px 0;
-    background-color: #f8f8f8;
+    // margin: 00px 0  0;
+    padding: 200px 0 100px 0;
+    background-color: #F8F8F8 !important;
     .container{
         .row{
             .col-md-6{
@@ -685,7 +760,7 @@ footer{
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        box-shadow: 1px 1px 10px gray;
+                        box-shadow: 1px 1px 5px 2px lightgray;
                         i{
                             font-size: 18px;
                             color: #F53838;
