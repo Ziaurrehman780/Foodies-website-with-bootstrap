@@ -1,0 +1,105 @@
+
+@mixin main-btn{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px 32px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+}
+@mixin play-btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    .play{
+        z-index: 2;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        img{
+            width: 26px;
+            height: 26px;
+            z-index: 3;
+        }
+    }
+}
+@mixin facilities-card{
+    .col-md-4{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 96px;
+        &::before{
+            position: absolute;
+            content: "";
+            top: -48px;
+            left: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: $light-color;
+            border: 3px solid $main-color;
+            // background-image: url(../images/fac-card1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .fac-card{
+            height: 100%;
+            background-color: $main-color;
+            box-shadow: 0px 4px 4px rgba(242, 244, 248, 0.75);
+            border-radius: 14px;
+            padding: 64px 15px 24px 24px;
+            h5{
+                color: $light-color;
+            }
+            small{
+                color: $light-color;
+                display: block;
+                font-weight: 400 !important;
+            }
+            a{
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 22px;
+                color: $light-color;
+            }
+            
+        }
+    }
+}
+@mixin input-group{
+    color: $dark-color;
+    caret-color: $dark-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    // outline: unset !important;
+    box-shadow: unset !important;
+    &::placeholder{
+        opacity: 0.15;
+        color: $dark-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+}
