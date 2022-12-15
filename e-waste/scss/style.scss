@@ -84,7 +84,7 @@ header{
                         }
                         &.active{
                             color: $main-color;
-                            opacity: 0.5;
+                            text-decoration-line: underline;
                         }
                     }
                 }
@@ -130,7 +130,6 @@ header{
                     position: relative;
                     img{
                         width: 100%;
-                        height: 100%;
                         object-fit: cover;
                     }
                     &::before{
@@ -138,8 +137,8 @@ header{
                         content: " ";
                         width: 100%;
                         height: 100%;
-                        top: 16px;
-                        left: 16px;
+                        top: calc(7.6% / 2);
+                        left: calc(5.3% / 2);
                         background: #FDCA40;
                         border-radius: 30px;
                         z-index: -1;
@@ -149,37 +148,14 @@ header{
                         content: " ";
                         width: 100%;
                         height: 100%;
-                        top: 32px;
-                        left: 32px;
+                        top: 7.6%;
+                        left: 5.3%;
                         background: rgba(253, 202, 64, 0.5);
                         border-radius: 30px;
                         z-index: -1;
                     }
                     .play-btn{
-                        position: absolute;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 88px;
-                        height: 88px;
-                        border-radius: 50%;
-                        background: rgba(255, 255, 255, 0.3);
-                        z-index: 1;
-                        .play{
-                            z-index: 2;
-                            width: 64px;
-                            height: 64px;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background: rgba(255, 255, 255, 0.2);
-                            img{
-                                width: 26px;
-                                height: 26px;
-                                z-index: 3;
-                            }
-                        }
+                        @include play-btn;
                     }
                 }
             }
@@ -266,7 +242,7 @@ header{
 .organizations{
     .container{
         .content-row{
-            width: 744px;
+            // width: 744px;
             h2{
                 color: $dark-color;
                 
@@ -337,6 +313,11 @@ header{
             .card3{
                 &::before{
                     background-image: url(../images/fac-card3.png);
+                }
+            }
+            .about-card{
+                &::before{
+                    background-image: url(../images/fac-card456.png);
                 }
             }
         }
@@ -656,7 +637,7 @@ header{
                     flex-direction: column;
                     gap: 8px;
                     list-style-type: none;
-                    // align-items: center;
+                    align-items: flex-start;
                     li{
                         color: $dark-color;
                         font-weight: 500;
@@ -668,7 +649,7 @@ header{
             }
             .address{
                 display: flex;
-                justify-content: center;
+                // justify-content: center;
                 
                 .content{
                     display: flex;
@@ -711,7 +692,7 @@ footer{
             .policy{
                 display: flex;
                 gap: 22px;
-                justify-content: end;
+                // justify-content: end;
                 padding: 0px;
                 small{
                     font-weight: 500 !important;
@@ -721,3 +702,506 @@ footer{
         }
     }
 }
+
+
+// about 
+.about{
+    padding: 128px 0px 122px 0px;
+    background-color: $main-color;
+    .container{
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .content-section{
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                h2{
+                    color: $light-color;
+                }
+                p{
+                    color: $light-color;
+                    width: 75%;
+                }
+            }
+            .img-section{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.about-hero-section{
+    margin: 64px 0px 88px 0px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .row{
+            ul.d-flex{
+                list-style-type: none;
+                li{
+                    
+                    a{
+                        color: $dark-color;
+                        text-decoration: none;
+                        ul{
+                            list-style-type: disc;
+                            li{
+                                opacity: 0.3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 120px;
+            justify-content: center;
+            .content-col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                // width: 45%;
+                h1{
+                    color: $dark-color;
+                }
+                p{
+                    color: $dark-color;
+                    // width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.team-members{
+    .container{
+        .content-row{
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            .content-heading{
+                h2{
+                    color: $dark-color;
+                }
+            }
+            .content-btn{
+                .main-btn{
+                    @include main-btn;
+                    background-color: $secondary-color;
+                    height: fit-content;
+                    @include hover;
+                }
+            }
+        }
+    }
+}
+
+
+
+// commercial
+.commercial-hero-section,
+.residential-hero-section,
+.pricing-hero-section{
+    margin: 64px 0px 200px 0px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .row{
+            ul.d-flex{
+                list-style-type: none;
+                li{
+                    
+                    a{
+                        color: $dark-color;
+                        text-decoration: none;
+                        ul{
+                            list-style-type: disc;
+                            li{
+                                opacity: 0.3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 120px;
+            justify-content: center;
+            .content-col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                // width: 45%;
+                h1{
+                    color: $dark-color;
+                }
+                p{
+                    color: $dark-color;
+                    // width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.work{
+    padding: 128px 0px 144px 0px;
+    background-color: $main-color;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .content-row{
+            display: flex;
+            gap: 16px;
+            h2{
+                color: $light-color;
+            }
+            p{
+                color: $light-color;
+            }
+        }
+        .card-row{
+            .card-col{
+                
+                .card{
+                    position: relative;
+                    border-radius: 14px;
+                    position: relative;
+                    .card-body{
+                        padding: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        
+                        h5{
+                            color: $dark-color;
+                        }
+                        small{
+                            color: $dark-color;
+                            font-weight: 400 !important;
+                        }
+                    }
+                    .play{
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 72px;
+                        height: 72px;
+                        border-radius: 50%;
+                        top: -36px;
+                        left: 36px;
+                        background-color: #FFD460;
+                        .play-btn{
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 50%;
+                            background: #FDCA40;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            h5{
+                                color: $light-color;
+                                position: absolute;
+                                top: calc(50% - 14px);
+                                left: calc(50% - 4);
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.itad{  
+    padding: 200px 0px 100px 0px;
+    .container{
+        .row{
+            .col-md-6{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;    
+                .content{
+                    padding: 0px 20px 0 35px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    h2{
+                        color: $dark-color;
+                    }
+                    p{
+                        color: $dark-color;
+                    }
+                }
+                .img-section{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 100%;
+                        border-radius: 14px
+                    }
+                    .play-btn{
+                        @include play-btn;
+                    }
+                    .outer{
+                        @include play-btn;
+                        background-color: rgba(255, 255, 255, 0.6);
+                        .inner{
+                            background-color: rgba(255, 255, 255, 0.6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.data-destruction{
+    margin: 200px 0 100px;
+    .container{
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .col-md-6{
+                .content{
+                    // padding: 0px 20px 0 35px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    h2{
+                        color: $dark-color;
+                    }
+                    p{
+                        color: $dark-color;
+                    }
+                }
+            }
+            .col-md-12{
+                .img-section{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 100%;
+                        border-radius: 14px;
+                    }
+                    .play-btn{
+                        @include play-btn;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.pricing-hero-section{
+    margin: 64px 0px 200px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .row{
+            ul.d-flex{
+                list-style-type: none;
+                li{
+                    
+                    a{
+                        color: $dark-color;
+                        text-decoration: none;
+                        ul{
+                            list-style-type: disc;
+                            li{
+                                opacity: 0.3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 120px;
+            justify-content: center;
+            .content-col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                // width: 45%;
+                h1{
+                    color: $dark-color;
+                }
+                p{
+                    color: $dark-color;
+                    // width: 50%;
+                }
+            }
+        }
+    }
+    .card-container{
+        .row{
+            .col-md-6{
+                .card{
+                    padding: 32px;
+                    border: none;
+                    border-radius: 14px;
+                    background-color: $main-color;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .img-section{
+                        width: 72px;
+                        height: 72px;
+                        border-radius: 50%;
+                        background-color: $light-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+                    .content{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
+                        h5{
+                            color: $light-color;
+                        }
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            li{
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 22px;
+                                color: $light-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// contact-section 
+.contact-hero-section{
+    margin: 64px 0px 200px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .row{
+            ul.d-flex{
+                list-style-type: none;
+                li{
+                    
+                    a{
+                        color: $dark-color;
+                        text-decoration: none;
+                        ul{
+                            list-style-type: disc;
+                            li{
+                                opacity: 0.3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 120px;
+            justify-content: center;
+            .content-col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                // width: 45%;
+                h1{
+                    color: $dark-color;
+                }
+                p{
+                    color: $dark-color;
+                    // width: 50%;
+                }
+            }
+        }
+    }
+    .card-container{
+        .row{
+            display: flex;
+            align-items: center;
+            .col-md-6{
+                .content{
+                    // background-color: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 32px;
+                    .address{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        div{
+                            // display: flex;
+                            small{
+                            margin-left: 12px;
+                            font-weight: 400 !important;
+
+                            }
+                        }
+                    }
+                    .social{
+                        display: flex;
+                        gap: 10px;
+                    }
+                    div{
+                        .main-btn{
+                            @include main-btn;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// contact-section end 
